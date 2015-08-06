@@ -176,7 +176,7 @@ module Faraday
       }.tr(' ', '+')
     end
 
-    def unescape(s) CGI.unescape s.to_s end
+    def unescape(s) CGI.unescape(s.to_s).encode("UTF-8") end
 
     DEFAULT_SEP = /[&;] */n
 
